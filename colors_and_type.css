@@ -1,0 +1,141 @@
+/* =============================================================
+   Reset Capital — Colors & Type
+   Single source of truth for color tokens and typography.
+   ============================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap");
+
+:root {
+  /* ── Raw Palette ── */
+  --rc-navy:            #023064;
+  --rc-navy-hover:      #011F44;
+  --rc-navy-press:      #011431;
+  --rc-cream:           #F8F5F0;
+  --rc-cream-hover:     #F1ECE3;
+  --rc-sage:            #5A8F72;
+  --rc-sage-hover:      #466F58;
+  --rc-sage-tint:       #EBF4EF;
+  --rc-gold:            #E8A73C;
+  --rc-steel:           #8FA3B4;
+  --rc-steel-tint:      #E5EAEF;
+  --rc-charcoal:        #2C3340;
+
+  /* ── Semantic Tokens ── */
+  --bg-page:            var(--rc-cream);
+  --bg-inverse:         var(--rc-navy);
+  --bg-overlay:         rgba(2, 48, 100, 0.5);
+  --fg-1:               var(--rc-charcoal);
+  --fg-2:               #55606F;
+  --fg-3:               #9AA3AF;
+  --fg-inverse-1:       var(--rc-cream);
+  --fg-inverse-2:       rgba(248, 245, 240, 0.72);
+  --fg-brand:           var(--rc-navy);
+  --fg-link:            var(--rc-sage);
+  --fg-link-hover:      var(--rc-navy);
+  --fg-accent:          var(--rc-gold);
+
+  --border-hairline:    rgba(143, 163, 180, 0.4);
+  --border-strong:      var(--rc-charcoal);
+  --border-inverse:     rgba(248, 245, 240, 0.15);
+
+  --vertical-medtech:   var(--rc-steel);
+  --vertical-energy:    var(--rc-sage);
+
+  /* ── Radii ── */
+  --radius-sm:          2px;
+  --radius-md:          4px;
+  --radius-pill:        999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:          0 1px 2px rgba(2, 48, 100, 0.06);
+  --shadow-md:          0 4px 12px rgba(2, 48, 100, 0.08);
+  --shadow-lg:          0 16px 40px rgba(2, 48, 100, 0.14);
+
+  /* ── Spacing (8-pt grid) ── */
+  --space-1:  4px;  --space-2:  8px;  --space-3:  12px;
+  --space-4:  16px; --space-5:  24px; --space-6:  32px;
+  --space-7:  48px; --space-8:  64px; --space-9:  96px;
+  --space-10: 128px;
+
+  /* ── Motion ── */
+  --ease-standard: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+  --dur-fast:  150ms;
+  --dur-base:  250ms;
+  --dur-slow:  400ms;
+
+  /* ── Typography ── */
+  --font-display: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Calibri", "Carlito", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --type-display-size: 64px;  --type-display-lh: 1.05; --type-display-w: 600; --type-display-tr: -0.02em;
+  --type-h1-size: 48px;       --type-h1-lh: 1.1;       --type-h1-w: 600;     --type-h1-tr: -0.01em;
+  --type-h2-size: 32px;       --type-h2-lh: 1.15;      --type-h2-w: 600;     --type-h2-tr: -0.005em;
+  --type-h3-size: 22px;       --type-h3-lh: 1.25;      --type-h3-w: 500;
+  --type-h4-size: 18px;       --type-h4-lh: 1.3;       --type-h4-w: 600;
+  --type-body-size: 16px;     --type-body-lh: 1.55;    --type-body-w: 400;
+  --type-body-lg-size: 18px;  --type-body-lg-lh: 1.6;
+  --type-small-size: 14px;    --type-small-lh: 1.45;
+  --type-caption-size: 12px;  --type-caption-lh: 1.4;
+  --type-eyebrow-size: 12px;  --type-eyebrow-w: 500;   --type-eyebrow-tr: 0.12em;
+}
+
+html, body {
+  background: var(--bg-page);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-lh);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--fg-brand);
+  margin: 0 0 var(--space-4) 0;
+}
+
+h1 { font-size: var(--type-h1-size); line-height: var(--type-h1-lh); font-weight: var(--type-h1-w); letter-spacing: var(--type-h1-tr); }
+h2 { font-size: var(--type-h2-size); line-height: var(--type-h2-lh); font-weight: var(--type-h2-w); letter-spacing: var(--type-h2-tr); }
+h3 { font-size: var(--type-h3-size); line-height: var(--type-h3-lh); font-weight: var(--type-h3-w); }
+h4 { font-size: var(--type-h4-size); line-height: var(--type-h4-lh); font-weight: var(--type-h4-w); }
+
+p { margin: 0 0 var(--space-4) 0; }
+small { font-size: var(--type-small-size); line-height: var(--type-small-lh); color: var(--fg-2); }
+
+a { color: var(--fg-link); text-decoration: none; transition: color var(--dur-fast) var(--ease-standard); }
+a:hover { color: var(--fg-link-hover); text-decoration: underline; text-underline-offset: 3px; }
+
+hr { border: 0; border-top: 1px solid var(--border-hairline); margin: var(--space-6) 0; }
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-w);
+  letter-spacing: var(--type-eyebrow-tr);
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin-bottom: var(--space-3);
+  display: inline-block;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-size: var(--type-display-size);
+  line-height: var(--type-display-lh);
+  font-weight: var(--type-display-w);
+  letter-spacing: var(--type-display-tr);
+  color: var(--fg-brand);
+}
+
+.on-navy { background: var(--bg-inverse); color: var(--fg-inverse-1); }
+.on-navy h1, .on-navy h2, .on-navy h3, .on-navy h4 { color: var(--fg-inverse-1); }
+.on-navy .eyebrow { color: var(--rc-gold); }
+.on-cream { background: var(--bg-page); color: var(--fg-1); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+}
