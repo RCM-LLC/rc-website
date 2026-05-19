@@ -622,11 +622,22 @@ body::before {
   .navbar .links a { padding: 14px 0; border-top: 1px solid rgba(248,245,240,0.12); }
   .navbar .inner { flex-wrap: nowrap; }
   .hamburger { display: flex; }
+
+  /* Font scaling — moderate (20-25%) */
   .hero { padding: 100px 0 120px; }
-  .hero h1 { font-size: 64px; }
-  .hero .lede { font-size: 18px; }
+  .hero h1 { font-size: 38px; }
+  .hero .lede { font-size: 16px; }
   .section { padding: 72px 0; }
-  .section h2 { font-size: 36px; }
+  .section h2 { font-size: 26px; }
+  .lede { font-size: 16px; }
+  .verticals-intro { font-size: 38px; }
+  .vert h3 { font-size: 18px; }
+  .vert p { font-size: 15px; }
+  .pv-card p { font-size: 14px; }
+  .person-card h4 { font-size: 0.85rem; }
+  .person-title { font-size: 0.65rem; }
+
+  /* Layout */
   .thesis { grid-template-columns: 1fr; gap: 40px; }
   .pillars { grid-template-columns: 1fr; border-top: none; }
   .pillar { border-right: none; border-top: 1px solid rgba(248,245,240,0.12); padding: 32px 0; }
@@ -643,8 +654,14 @@ body::before {
 }
 
 @media (max-width: 480px) {
-  .hero h1 { font-size: 48px; }
+  /* Further font scaling */
+  .hero h1 { font-size: 30px; }
+  .section h2 { font-size: 22px; }
+
+  /* Headshots — constrain width on single column so they don't fill the screen */
   .people-grid { grid-template-columns: 1fr; }
+  .person-photo { max-width: 60%; margin-left: auto; margin-right: auto; }
+
   .footer .cols { grid-template-columns: 1fr; }
   .pillars-v-glyph { grid-template-columns: 1fr; }
 }
