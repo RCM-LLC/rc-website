@@ -658,9 +658,8 @@ body::before {
   .hero h1 { font-size: 30px; }
   .section h2 { font-size: 22px; }
 
-  /* Headshots — constrain width on single column so they don't fill the screen */
-  .people-grid { grid-template-columns: 1fr; }
-  .person-photo { max-width: 60%; margin-left: auto; margin-right: auto; }
+  .people-grid { grid-template-columns: repeat(2, 1fr); }
+  .person-photo { max-width: 100%; margin-left: 0; margin-right: 0; }
 
   .footer .cols { grid-template-columns: 1fr; }
   .pillars-v-glyph { grid-template-columns: 1fr; }
